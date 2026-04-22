@@ -1,5 +1,6 @@
 import type { Favorite } from '../types';
 import { Card, Badge } from '@/shared/ui';
+import Image from 'next/image';
 
 interface FavoriteCardProps {
   favorite: Favorite;
@@ -8,18 +9,22 @@ interface FavoriteCardProps {
 /**
  * ✅ Server Component — solo renderiza HTML, no usa hooks ni eventos
  */
-export function FavoriteCard({ favorite }: FavoriteCardProps) {
+import React from 'react';
+
+export const FavoriteCard = React.memo(function FavoriteCard({ favorite }: FavoriteCardProps) {
   return (
     <Card>
       <h3>{favorite.title}</h3>
       <p>{favorite.description}</p>
       {favorite.ilustracion && (
-        <img
+        <Image
           src={favorite.ilustracion}
           alt={favorite.title}
-          style={{ width: '120px', height: '120px', objectFit: 'contain', borderRadius: '8px' }}
+          width={120}
+          height={120}
+          style={{ objectFit: 'contain', borderRadius: '8px' }}
         />
       )}
     </Card>
   );
-}
+});

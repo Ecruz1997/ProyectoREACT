@@ -8,8 +8,10 @@ export function useAsync<T>(asyncFn: () => Promise<T>, deps: any[] = []) {
 
   useEffect(() => {
     abortRef.current = new AbortController();
-    setLoading(true);
-    setError(null);
+    setTimeout(() => {
+      setLoading(true);
+      setError(null);
+    }, 0);
 
     asyncFn()
       .then(res => {

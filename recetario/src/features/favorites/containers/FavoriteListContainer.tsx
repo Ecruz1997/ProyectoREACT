@@ -9,7 +9,10 @@ export function FavoriteListContainer() {
   const [favorites, setFavorites] = useState<Favorite[]>([]);
 
   useEffect(() => {
-    setFavorites(getAllFavorites());
+    // Evitar render en cascada
+    setTimeout(() => {
+      setFavorites(getAllFavorites());
+    }, 0);
   }, []);
 
   return <FavoriteList favorites={favorites} />;

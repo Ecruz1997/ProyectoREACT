@@ -1,3 +1,13 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Recetario | Cocina Fácil",
+  description: "Explora recetas y favoritos en un solo lugar.",
+  openGraph: {
+    title: "Recetario | Cocina Fácil",
+    description: "Explora recetas y favoritos en un solo lugar.",
+  },
+};
 import {
   TabsRoot,
   TabsHeader,

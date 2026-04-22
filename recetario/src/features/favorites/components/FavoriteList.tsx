@@ -1,11 +1,12 @@
 import type { Favorite } from '../types';
 import { FavoriteCard } from './FavoriteCard';
+import React from 'react';
 
 interface FavoriteListProps {
   favorites: Favorite[];
 }
 
-export function FavoriteList({ favorites }: FavoriteListProps) {
+const FavoriteList = React.memo(function FavoriteList({ favorites }: FavoriteListProps) {
   return (
     <div>
       {favorites.map(fav => (
@@ -13,4 +14,6 @@ export function FavoriteList({ favorites }: FavoriteListProps) {
       ))}
     </div>
   );
-}
+});
+
+export { FavoriteList };
