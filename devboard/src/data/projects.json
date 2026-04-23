@@ -1,0 +1,16 @@
+[
+  {
+    "id": "p1",
+    "name": "DevBoard",
+    "description": "Gestión de proyectos y tickets en un tablero Kanban.",
+    "tickets": ["t1", "t2", "t3"],
+    "progress": 0.33
+  },
+  {
+    "id": "p2",
+    "name": "Landing Page",
+    "description": "Sitio web institucional.",
+    "tickets": ["t4"],
+    "progress": 0.75
+  }
+]
