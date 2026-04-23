@@ -1,5 +1,0 @@
-{
-  "extends": ["next", "next/core-web-vitals"],
-  "ignorePatterns": [".next/**", "out/**", "build/**", "node_modules/**"],
-  "rules": {}
-}
