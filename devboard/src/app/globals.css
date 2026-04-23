@@ -1,0 +1,199 @@
+/* Botón base */
+.btn {
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  border-radius: var(--radius);
+  border: none;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+}
+.btn:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 4px 16px 0 rgba(37,99,235,0.10);
+}
+.btn-secondary {
+  background: var(--secondary);
+  color: var(--primary);
+  border: 1px solid var(--border);
+}
+.btn-secondary:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* Input y select */
+.input, select {
+  padding: 0.5em 1em;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--secondary);
+  color: var(--foreground);
+  margin-right: 0.5em;
+  outline: none;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+.input:focus, select:focus {
+  border: 1.5px solid var(--primary);
+  box-shadow: 0 0 0 2px var(--primary-hover, #1d4ed8, 0.1);
+}
+
+/* Badge */
+.badge {
+  display: inline-block;
+  padding: 0.2em 0.8em;
+  border-radius: 999px;
+  font-size: 0.85em;
+  font-weight: 600;
+  margin-right: 0.5em;
+  background: var(--border);
+  color: var(--foreground);
+}
+.badge-red { background: var(--danger); color: #fff; }
+.badge-yellow { background: var(--accent); color: #fff; }
+.badge-green { background: var(--success); color: #fff; }
+.badge-gray { background: var(--border); color: var(--foreground); }
+
+/* TicketCard y KanbanCard */
+.ticket-card, .kanban-card {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1em;
+  margin-bottom: 1em;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: box-shadow 0.2s, border 0.2s;
+}
+.ticket-card:hover, .kanban-card:hover {
+  box-shadow: 0 6px 24px 0 rgba(37,99,235,0.10);
+  border: 1.5px solid var(--primary);
+}
+
+/* KanbanBoard y columnas */
+.kanban-board {
+  display: flex;
+  gap: 24px;
+  margin-top: 24px;
+  overflow-x: auto;
+}
+.kanban-column {
+  background: var(--secondary);
+  border-radius: var(--radius);
+  padding: 1em;
+  min-width: 260px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+}
+.kanban-column h4 {
+  margin-bottom: 1em;
+  font-size: 1.1em;
+  color: var(--primary);
+}
+
+/* ProjectList */
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+}
+
+/* FilterBar */
+.filter-bar {
+  display: flex;
+  gap: 1em;
+  margin-bottom: 1.5em;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+:root {
+  --background: #f7f8fa;
+  --foreground: #181c20;
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --secondary: #f1f5f9;
+  --accent: #fbbf24;
+  --danger: #ef4444;
+  --success: #22c55e;
+  --border: #e5e7eb;
+  --radius: 12px;
+  --shadow: 0 2px 8px 0 rgba(0,0,0,0.06);
+  --font-main: 'Geist', Arial, Helvetica, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #181c20;
+    --foreground: #f7f8fa;
+    --secondary: #23272f;
+    --border: #23272f;
+    --shadow: 0 2px 12px 0 rgba(0,0,0,0.18);
+  }
+  html {
+    color-scheme: dark;
+  }
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover {
+  color: var(--primary-hover);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 0.5em;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 16px;
+}
+
+button, input, select {
+  font-family: inherit;
+  font-size: 1em;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: var(--secondary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 8px;
+}

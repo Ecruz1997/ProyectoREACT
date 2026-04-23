@@ -1,0 +1,38 @@
+[
+  {
+    "id": "t1",
+    "projectId": "p1",
+    "title": "Configurar estructura base",
+    "priority": "alta",
+    "label": "setup",
+    "assignee": "Ana",
+    "status": "Backlog"
+  },
+  {
+    "id": "t2",
+    "projectId": "p1",
+    "title": "Diseñar KanbanBoard",
+    "priority": "media",
+    "label": "UI",
+    "assignee": "Luis",
+    "status": "En progreso"
+  },
+  {
+    "id": "t3",
+    "projectId": "p1",
+    "title": "Implementar filtros",
+    "priority": "baja",
+    "label": "feature",
+    "assignee": "Ana",
+    "status": "Backlog"
+  },
+  {
+    "id": "t4",
+    "projectId": "p2",
+    "title": "Crear hero section",
+    "priority": "alta",
+    "label": "UI",
+    "assignee": "Carlos",
+    "status": "Completado"
+  }
+]
